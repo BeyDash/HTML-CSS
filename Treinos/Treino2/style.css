@@ -31,12 +31,24 @@ body {
     color: #390871;
 }
 
+.limite-texto{
+    max-width: 600px; /* Ajuste conforme necessário */
+    word-wrap: break-word;
+}
+
 .conteudo {
     padding: 35px;
 }
 
 .centralizar{
     text-align: center;
+}
+
+.imagemCircular {
+    border-radius: 50%; /* Define a moldura circular */
+    width: 150px; /* Ajuste conforme necessário */
+    height: 150px; /* Ajuste conforme necessário */
+    object-fit: cover; /* Mantém a proporção e corta a imagem se necessário */
 }
 
 h1, p {
