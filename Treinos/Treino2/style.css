@@ -42,6 +42,8 @@ body {
 
 .centralizar{
     text-align: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .imagemCircular {
@@ -49,6 +51,7 @@ body {
     width: 150px; /* Ajuste conforme necessário */
     height: 150px; /* Ajuste conforme necessário */
     object-fit: cover; /* Mantém a proporção e corta a imagem se necessário */
+    border: 3px solid #a80202;
 }
 
 h1, p {
