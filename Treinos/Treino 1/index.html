@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+</head>
+<body>
+
+    <h1>Calculadora Simples</h1>
+
+    <form id="calculatorForm">
+        <label for="operation">Selecione a operação:</label>
+        <select id="operation" name="operation">
+            <option value="1">Soma</option>
+            <option value="2">Subtração</option>
+            <option value="3">Multiplicação</option>
+            <option value="4">Divisão</option>
+            <option value="5">Potência</option>
+            <option value="6">Raiz Quadrada</option>
+        </select>
+
+        <label for="value1">Digite o primeiro número:</label>
+        <input type="number" id="value1" name="value1" step="any" required>
+
+        <label for="value2">Digite o segundo número:</label>
+        <input type="number" id="value2" name="value2" step="any" required>
+
+        <button type="button" onclick="calculate()">Calcular</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function calculate() {
+            // Seu código JavaScript aqui
+            const operation = parseInt(document.getElementById("operation").value);
+            const value1 = parseFloat(document.getElementById("value1").value);
+            const value2 = parseFloat(document.getElementById("value2").value);
+
+            let result;
+
+            switch (operation) {
+                case 1:
+                    result = value1 + value2;
+                    break;
+                case 2:
+                    result = value1 - value2;
+                    break;
+                case 3:
+                    result = value1 * value2;
+                    break;
+                case 4:
+                    result = value1 / value2;
+                    break;
+                case 5:
+                    result = Math.pow(value1, value2);
+                    break;
+                case 6:
+                    result = Math.sqrt(value1);
+                    break;
+                default:
+                    result = "Operação inválida";
+            }
+
+            document.getElementById("result").innerText = "Resultado: " + result;
+        }
+    </script>
+
+</body>
+</html>
