@@ -30,6 +30,10 @@ body {
     padding: 35px;
 }
 
+.centralizar{
+    text-align: center;
+}
+
 h1, p {
     margin-bottom: 35px;
 }
